@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/styles.css'%}" class="">
+
+  <title>Home</title>
+</head>
+
+<body>
+  <nav class="navbar h-nav-resp">
+    <div class="logo hide-class-resp">
+      <p class="nametag"><b>Akash Shinde</b></p>
+      <p class="sub-nametag"><b>Trying to be better</b></p>
+    </div>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <ul class="nav-list hide-class-resp">
+
+      <li><a href="{% url 'Home'%}" class="">Home</a></li>
+      <li><a href="{% url 'About'%}" class="">About</a></li>
+      <li><a href="{% url 'Portfolio' %}" class="">Portfolio</a></li>
+      <li><a href="#Blog" class="">Blog</a></li>
+      <li><button onclick="ReachUs()">Reach Out</button></li>
+
+    </ul>
+
+
+  </nav>
+  <section class="Introduction">
+    <div class="container">
+      <p class="welcome-tag-resp"><span class="welcome-tag">Hello <span style="color: #0095ff">Everyone!</span></span></p>
+      <p class="Description">My name is <span style="color: #0095ff">Akash Shinde!</span><br>I am a software engineer and this is my personal portfolio
+        website. Here, you will
+        find all the projects I have created and worked on during my learning period.
+        Which still continues and will probably last until I die! Because that's what the heroes... uhh..uh I mean
+        programmers do&#128517;
+        Jokes aside, you will also find a blog page here where I will bore you with my wisdom and technical knowledge so
+        be warned!</p> <p class="Description">This is it now go and checkout my portfolio and blog and also subscribe for latest updates. Peace
+        Out&#x270c; <span style="color: #0095ff;">!</span>
+      </p>
+    </div>
+    <div class="self-image"><img src="{% static 'img/laptop.jpg'%}"></div>
+  </section>
+  <section></section>
+  <script src="{%static 'js/script.js'%}"></script>
+</body>
+
+</html>

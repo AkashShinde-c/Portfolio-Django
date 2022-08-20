@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/styles.css'%}" class="">
+
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <nav class="navbar h-nav-resp" id="navbar">
+    <div class="logo hide-class-resp">
+      <p class="nametag"><b>Akash Shinde</b></p>
+      <p class="sub-nametag"><b>Trying to be better</b></p>
+    </div>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <ul class="nav-list hide-class-resp">
+
+      <li><a href="{% url 'Home'%}" class="">Home</a></li>
+      <li><a href="{% url 'About'%}" class="">About</a></li>
+      <li><a href="{% url 'Portfolio'%}" class="">Portfolio</a></li>
+      <li><a href="#Blog" class="">Blog</a></li>
+      <li><button onclick="ReachUs()">Reach Out</button></li>
+
+    </ul>
+  </nav>
+  <div class="mainBackground">
+    <div class="detailContainer">
+      <div class="title"><h1>{{projectInfo.projectName}}</h1></div>
+      <div class="intro"></div>
+      <div class="images"></div>
+      <div class="ending"></div>
+      <div class="techStack"></div>
+      <div class="link"></div>
+    </div> 
+  </div>  
+</body>
+<script src="{%static 'js/script.js'%}"></script>
+</html>

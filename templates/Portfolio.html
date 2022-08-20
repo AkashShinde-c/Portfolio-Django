@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/styles.css'%}" class="">
+
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <nav class="navbar h-nav-resp" id="navbar">
+    <div class="logo hide-class-resp">
+      <p class="nametag"><b>Akash Shinde</b></p>
+      <p class="sub-nametag"><b>Trying to be better</b></p>
+    </div>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <ul class="nav-list hide-class-resp">
+
+      <li><a href="{% url 'Home'%}" class="">Home</a></li>
+      <li><a href="{% url 'About'%}" class="">About</a></li>
+      <li><a href="{% url 'Portfolio'%}" class="">Portfolio</a></li>
+      <li><a href="#Blog" class="">Blog</a></li>
+      <li><button onclick="ReachUs()">Reach Out</button></li>
+
+    </ul>
+
+
+  </nav>
+  <div class="skill">
+    <span>Area of experience</span>
+  <div class = "mainContainer">
+    <div class="flip-card" onmouseover="changeColor()" onmouseout="rechangeColor()">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p><span>Languages</span><br><span></span><br>
+            </p>
+            <img src="{% static 'img/code-128.png'%}" alt="" width="200px"> 
+        </div>
+        <div class="flip-card-back">
+          <div class="listContainer">
+            <ul style="list-style: none;">
+               <li>C++</li>
+               <li><div class="progressBar"></div></li><br>
+               <li>Java</li>
+               <li><div class="progressBar"></div></li><br>
+               <li>Python</li>
+               <li><div class="progressBar"></div></li><br>
+               <li>JavaScript</li>
+               <li><div class="progressBar"></div></li>
+            </ul>
+             </div>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card  ">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <p><span>Languages </span><br><span>I worked with....</span>
+        </div>
+        <div class="flip-card-back">
+          <div class="listContainer">
+         <ul>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+         </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+</div>
+
+</div>
+<div class="projects">
+  <span>Projects</span>
+  <div class="projectsContainer">
+    
+    {%for project in projectDetails%}
+      <div class="projectCard" onmouseover="changeHeight()" onmouseout="rechangeHeight()">
+        <img src="{{project.refImg.url}}" alt="" >
+         
+         <a class="slider" href="{% url 'project_details'%}?searchId={{project.id}}" >
+          <p>{{project.projectName}}</p>
+        </a>
+      </div>
+    {% endfor%}
+  </div>
+</div>
+<div class="interests" >
+  <span>My Interests</span>
+  <div class="cardsContainer">
+    <div class="interestCard">
+      <img src="{% static 'img/cv.png'%}" alt="" style="height: 100%; width: 100%">
+    </div>
+  </div>
+</div>
+</body>
+<script src="{%static 'js/script.js'%}"></script>
+</html>

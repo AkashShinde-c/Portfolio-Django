@@ -1,0 +1,47 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" class="">
+    <title>About</title>
+</head>
+<body>
+    <nav class="navbar h-nav-resp">
+        <div class="logo hide-class-resp">
+          <p class="nametag"><b>Akash Shinde</b></p>
+          <p class="sub-nametag"><b>Trying to be better</b></p>
+        </div>
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="nav-list hide-class-resp">
+    
+          <li><a href="{% url 'Home'%}" class="">Home</a></li>
+          <li><a href="{% url 'About'%}" class="">About</a></li>
+          <li><a href="{% url 'Portfolio'%}" class="">Portfolio</a></li>
+          <li><a href="#Blog" class="">Blog</a></li>
+          <li><button onclick="ReachUs()">Reach Out</button></li>
+    
+        </ul>
+      </nav>
+      <section class="aboutContainer">
+          <div class="back">
+            <img src="{%static 'img/ak.jpg'%}" alt="profilePic">
+            <p class="name">AKASH SHINDE</p>
+            <p class ="sub-name">Student, Computer Engineer, Software Developer</p>
+            <div class="About-Description">
+            <p>Hello, My name is Akash Shinde and I'm currently persuing BE in Artificial Intelligence and Data Science(2nd year) from D. Y. Patil college of engineering-Pune.
+              I have completed my Diploma in Information Technology from K.K. Wagh Polytechnic Nasik.
+              Recently I am learning web-devlopment(Backend) and exploring my ways through Artficial Intelligence and Data Science and see where the my learning path takes me.  
+            </p>
+            </div>
+            </div>
+      </section>
+      <script src="{%static 'js/script.js'%}"></script>
+</body>
+</html>
